@@ -125,6 +125,72 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row">
+                            <div class="col">
+            
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4>5.	Write a program to check a number is having 4 at units place </h4>
+                                        <div class="row">
+                                            <div class="col-sm-2">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" id="units" value="" placeholder="Enter Value">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3"> <button class="btn btn-default"
+                                                    onclick="unitsPlace()">Submit</button></div>
+                                            <div class="col-sm-3">
+                                                <div id="resultOfUnitsPlace"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+                    </div>
+                    <div class="row">
+                            <div class="col">
+            
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4>6.	Write a program to check a number is 3digited number or not  </h4>
+                                        <div class="row">
+                                            <div class="col-sm-2">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" id="digit" value="" placeholder="Enter Value">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3"> <button class="btn btn-default"
+                                                    onclick="digitLenth()">Submit</button></div>
+                                            <div class="col-sm-3">
+                                                <div id="resultOfdigitLenth"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+                    </div>
+                    <div class="row">
+                            <div class="col">
+            
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4>7.	Write a program to print even or odd for a given number </h4>
+                                        <div class="row">
+                                            <div class="col-sm-2">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" id="evenVal" value="" placeholder="Enter Value">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-3"> <button class="btn btn-default"
+                                                    onclick="evenOdd()">Submit</button></div>
+                                            <div class="col-sm-3">
+                                                <div id="resultOfevenOdd"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>
+                    </div>
         </div>
 
 
@@ -183,9 +249,7 @@
                 }
 
             }
-
             // positive or not 
-
             function positiveNum() {
                 var inputVal = document.getElementById('positive').value;
                 if ( inputVal >= 0) {
@@ -195,8 +259,52 @@
                     document.getElementById('resultOfPositive').textContent = inputVal+' This Number is Negative';
 
                 }
-
             }
+
+            // units place
+            function unitsPlace() {
+                var inputVal = document.getElementById('units').value;
+                var digit=inputVal.toString()[0];
+                if ( digit == '4') {
+                    document.getElementById('resultOfUnitsPlace').textContent = inputVal+' true';
+                    console.log('true');
+                }
+                else {
+                    document.getElementById('resultOfUnitsPlace').textContent = inputVal+' false';
+                    console.log('false');
+                }
+            }
+            // 3digited
+            function digitLenth() {
+                var inputVal = document.getElementById('digit').value.length;
+               // var digitlength=inputVal.length;
+                console.log(inputVal);
+                if ( inputVal == 3) {
+                    document.getElementById('resultOfdigitLenth').textContent = inputVal+' This Number is 3digited';
+                    
+                }
+                else {
+                     document.getElementById('resultOfdigitLenth').textContent = inputVal+' This Number is More than 3digits';
+                    
+                }
+            }
+
+            // evenOdd
+            function evenOdd() {
+                var inputVal = Number(document.getElementById('evenVal').value);
+               
+                if ( inputVal % 2 == 0 ) {
+                    document.getElementById('resultOfevenOdd').textContent = inputVal+' This Number is Even';
+                    console.log(inputVal % 2  );
+                    
+                }
+                else {
+                    document.getElementById('resultOfevenOdd').textContent = inputVal+' This Number is Odd';
+                    console.log(inputVal % 2 );
+                }
+            }
+
+            
 
         </script>
 </body>
