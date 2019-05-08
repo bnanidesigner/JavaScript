@@ -9,9 +9,19 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <title>if-esle-assignment</title>
     <style>
-        .section-block { padding: 20px; }
-        .section-block h2 { font-size: 18px; }
-        .card-body h4{ font-size: 16px; color: #0062cc; }
+        .section-block {
+            padding: 20px;
+        }
+
+        .section-block h2 {
+            font-size: 18px;
+        }
+
+        .card-body h4 {
+            font-size: 16px;
+            color: #0062cc;
+        }
+        .custom-card{ margin-bottom: 20px;}
     </style>
 </head>
 
@@ -26,44 +36,95 @@
             <div class="row">
                 <div class="col">
 
-                    <div class="card">
+                    <div class="card custom-card">
                         <div class="card-body">
                             <h4>1. Write a program to check a number is divisible by 7 or not</h4>
-                           <div class="row">
-                               <div class="col-sm-2">
+                            <div class="row">
+                                <div class="col-sm-2">
                                     <div class="form-group">
-                                            <input type="text" class="form-control" id="divisible" value="" placeholder="Enter Value">
+                                        <input type="text" class="form-control" id="divisible" value=""
+                                            placeholder="Enter Value">
                                     </div>
-                               </div>
-                               <div class="col-sm-3"> <button class="btn btn-default" onclick="divisible()">Submite</button></div>
-                               <div class="col-sm-3"><div id="resultOfdivisible"></div>
-                           </div>
+                                </div>
+                                <div class="col-sm-3"> <button class="btn btn-default"
+                                        onclick="divisible()">Submit</button></div>
+                                <div class="col-sm-3">
+                                    <div id="resultOfdivisible"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div class="row">
+                    <div class="col">
+    
+                        <div class="card">
+                            <div class="card-body">
+                                <h4>2.	Write a program to check a number is factor of 84 or not </h4>
+                                <div class="row">
+                                    <div class="col-sm-2">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" id="factor" value=""
+                                                placeholder="Enter Value">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-3"> <button class="btn btn-default"
+                                            onclick="factor()">Submit</button></div>
+                                    <div class="col-sm-3">
+                                        <div id="resultOFactor"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </div>
-    </div>
 
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="assets/js/jquery-3.2.1.slim.min.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script>
-        function divisible(){
-           var inputVal=document.getElementById('divisible').value;
-           if(inputVal%7==0){
-            document.getElementById('resultOfdivisible').textContent='Divisible is True';              
-           }
-           else{
-            document.getElementById('resultOfdivisible').textContent='Divisible is Fasle'; 
-            
-           }
-           
-        }
-    </script>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="assets/js/jquery-3.2.1.slim.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script>
+            function divisible() {
+                var inputVal = document.getElementById('divisible').value;
+                if (inputVal % 7 == 0) {
+                    document.getElementById('resultOfdivisible').textContent = 'Divisible is True';
+                }
+                else {
+                    document.getElementById('resultOfdivisible').textContent = 'Divisible is Fasle';
+
+                }
+
+            }
+
+            function factor() {
+                var inputVal = document.getElementById('factor').value;
+                if (84 % inputVal == 0) {
+                    document.getElementById('resultOFactor').textContent = inputVal+' Yes This is factor of 84';
+                }
+                else {
+                    document.getElementById('resultOFactor').textContent = inputVal+' This not factor of 84';
+
+                }
+
+            }
+
+            function calculate(num) {
+                var str = "0";
+                for (var i = 1; i <= num; i++) {
+                    if (num % i == 0) {
+                        str += ',' + i;
+                    }
+                }
+                alert(str);
+            }
+            // calculate(84);
+
+        </script>
 </body>
 
 </html>
