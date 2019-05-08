@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Section 2: JavaScript Language Basics</title>
+    </head>
+
+    <body>
+        <h1>Section 2: JavaScript Language Basics</h1>
+    </body>
+    
+<script>
+    //Ternary Operator
+    var firstname="Naresh";
+    var age=20;
+    age>=18 ? console.log(firstname+' drink beer'):console.log(firstname+' drink Juice');
+    var drink = age>18 ?'drink beer':'drink Juice';
+    console.log(drink);
+    
+    var username = "Naresh";
+    var aging=10;
+    var workingyears = aging>=10 ? 'Team Lead':'Team Member';
+    console.log(workingyears);
+
+    //Switch Statement
+    var job='abc';
+    switch(job){
+        case 'designer': 
+            console.log(username+' is design mobile app and UI');
+            break;
+        case 'developer':
+            console.log(username+' is developed the mobile App');
+            break;
+        case 'tester':
+            console.log(username+' is tested the all Applications');
+            break;
+        default: console.log(username+' is nothing do it');
+    }
+
+    var age=25;
+    switch(true){
+        case age<=14:
+        console.log(username+' is boy');
+        break;
+        case age>=16 && age<20:
+        console.log(username+' is teenager');
+        break;
+        case age>=20:
+        console.log(username+' is a young man');
+        break;
+        default: console.log(username+' is a Man');
+
+    }
+
+    // Truthly and Falsy values and equality operators 
+
+    // Falsy values: undefined, null, 0, '', NaN
+    // Truthly 
+
+    var height;
+    height=23;
+    if(height){
+        console.log('variable is defined');
+    }
+    else{
+        console.log('variable is not been defined');
+    }
+
+    // Equality Operators
+    if(height=='23'){
+        console.log('The == operator does type coercion');
+        
+    }    
+
+    //Coding Challenges
+
+    var scoreJohn = (190+120+103)/3;
+    var scoreMike = (116+94+123)/3;
+    var scoreMary = (97+134+105)/3;
+
+    console.log('John Scored:'+scoreJohn, 'Mike Scored:'+scoreMike, 'Mary Scored: '+scoreMary);
+    
+    //console.log(' Jhon Scored 3games total '+john+','+'  '+' Mike Scored 3games total '+mike);
+    //var johnavg=john/3;
+   // var mikeavg=mike/3;
+    //console.log('Jhon Avg:'+johnavg+', '+'Mike Avg: '+mikeavg);
+    // if(johnavg>=mikeavg){
+    //     console.log('Winner is John');
+    // }
+    // else{
+    //     console.log('Winner is Mike');
+    // }
+    
+    //var winner = johnavg >= mikeavg ? 'Winner is John':'Winner is Mike';
+    //console.log(winner);
+    if(scoreJohn > scoreMike && scoreJohn > scoreMary){
+        console.log('Winner is John');
+    }    
+    else if(scoreMike > scoreJohn && scoreMike > scoreMary){
+        console.log('Winner is Mike');
+    }
+    else if(scoreMary > scoreJohn && scoreMary > scoreMike){
+        console.log('Winner is Mary');
+    }
+    else{
+        console.log('Match is Draws');
+    }
+
+    
+
+
+
+
+  
+
+
+
+</script>
+  
+
+</html>

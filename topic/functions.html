@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Section 2: JavaScript Language Basics</title>
+    </head>
+
+    <body>
+        <h1>Section 2: JavaScript Language Basics</h1>
+    </body>
+    
+<script>
+   // Functions 
+    function calculateAge(birthYear){
+        return 2019-birthYear;
+    }
+    var ageNaresh=calculateAge(1985);
+    var ageSathpal=calculateAge(1992);
+    console.log(ageNaresh, ageSathpal);
+
+    function yearsRetirment(year, firstName){
+        var age=calculateAge(year);
+        var retirment = 65 - age;
+        if(retirment>0)
+        {
+            console.log(firstName+' yeares Retirment in '+ retirment);
+        }
+        else{
+            console.log(firstName+' already retired.');
+        }
+        
+    }
+    yearsRetirment(1985, 'Naresh');
+    yearsRetirment(1940, 'Mallesh');
+    yearsRetirment(1992, 'Chari');
+
+    /* Function Statement and Expressions */
+    var whatDoYouDo = function(job, firstName){
+        switch(job){
+            case 'designer':
+            return firstName + ' Disigber do the design best websites';
+            case 'php':
+            return firstName + ' PHP developer can do the dynamic websites the best';
+            case '.net':
+            return firstName + '.Net application can use Windows applications';
+            default :
+            return firstName + ' does somthing else ';
+        }
+    }
+
+    console.log(whatDoYouDo('designer','Naresh'));
+    console.log(whatDoYouDo('php','Chari'));
+    console.log(whatDoYouDo('.naaa','Bhanu'));
+
+    /* Arrays */
+    //Initialize new array
+    var names=['Naresh','Mallesh Anna', 'Chari','Sravanthi','SathPal']
+    var years= new Array(1985,1972, 1990, 1974, 1995);
+    console.log(names);
+
+    //Mutate array data
+    console.log(years[2]);
+    console.log(names.length);
+    names[1]='Puli';
+    console.log(names);
+    names[names.length]='Pradeep Anna';
+    console.log(names);
+
+
+    // Different Date Type 
+    var naresh=['naresh','Bolakonda',1985,'UI & UX Developer', true,'Developer'];
+    console.log(naresh);
+    naresh.push('blue');
+    naresh.unshift('Mr.');
+    naresh.pop();
+    naresh.shift();
+    console.log(naresh);
+    //console.log(naresh.indexOf(23));
+    var isDeveloper= naresh.indexOf('Developer')===-1 ? 'Naresh is Not a developer':'Naresh is a developer';
+    console.log(isDeveloper);
+
+    function tipCalculate(bill){
+        var percentage;   
+        if(bill<50)
+        {
+            percentage=0.2;
+        } 
+        else if(bill>50 && bill<200){
+            percentage=0.15;
+        }
+        else if(bill>200){
+            percentage=0.1;
+        }
+        return percentage*bill;
+
+    }
+
+    tipCalculate(50);
+    
+
+    
+   
+  
+
+
+
+</script>
+  
+
+</html>
