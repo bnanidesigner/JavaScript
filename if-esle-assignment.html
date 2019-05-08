@@ -85,7 +85,7 @@
     
                         <div class="card">
                             <div class="card-body">
-                                <h4>3.	Write a program to check a number is multiple of 3 or not </h4>
+                                <h4>3. Write a program to check a number is multiple of 3 or not </h4>
                                 <div class="row">
                                     <div class="col-sm-2">
                                         <div class="form-group">
@@ -103,6 +103,28 @@
                         </div>
                     </div>
                 </div>
+                <div class="row">
+                        <div class="col">
+        
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4>4.	Write a program to check a number is positive or not </h4>
+                                    <div class="row">
+                                        <div class="col-sm-2">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" id="positive" value="" placeholder="Enter Value">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3"> <button class="btn btn-default"
+                                                onclick="positiveNum()">Submit</button></div>
+                                        <div class="col-sm-3">
+                                            <div id="resultOfPositive"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
         </div>
 
 
@@ -123,7 +145,7 @@
                 }
 
             }
-
+            //Factor
             function factor() {
                 var inputVal = document.getElementById('factor').value;
                 if (84 % inputVal == 0) {
@@ -136,16 +158,45 @@
 
             }
 
-            function calculate(num) {
-                var str = "0";
-                for (var i = 1; i <= num; i++) {
-                    if (num % i == 0) {
-                        str += ',' + i;
-                    }
-                }
-                alert(str);
-            }
+            // function calculate(num) {
+            //     var str = "0";
+            //     for (var i = 1; i <= num; i++) {
+            //         if (num % i == 0) {
+            //             str += ',' + i;
+            //         }
+            //     }
+            //     alert(str);
+            // }
             // calculate(84);
+
+            //
+            
+            //multipleOf 
+            function multipleOf() {
+                var inputVal = document.getElementById('multiple').value;
+                if ( inputVal % 3 == 0) {
+                    document.getElementById('resultOfMultiple').textContent = inputVal+' Yes This is multiple of 3';
+                }
+                else {
+                    document.getElementById('resultOfMultiple').textContent = inputVal+' This not multiple of 3';
+
+                }
+
+            }
+
+            // positive or not 
+
+            function positiveNum() {
+                var inputVal = document.getElementById('positive').value;
+                if ( inputVal >= 0) {
+                    document.getElementById('resultOfPositive').textContent = inputVal+' This Number is Positive';
+                }
+                else {
+                    document.getElementById('resultOfPositive').textContent = inputVal+' This Number is Negative';
+
+                }
+
+            }
 
         </script>
 </body>
