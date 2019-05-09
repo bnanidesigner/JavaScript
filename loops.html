@@ -51,14 +51,26 @@
                                         <input type="text" class="form-control" id="maxValue" value="" placeholder="Enter Maximum value">
                                     </div>
                                 </div>
-                                <div class="col-sm-6"> 
+                                <div class="col-sm-2">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="factors" value="" placeholder="Enter factor value">
+                                    </div>
+                                </div>
+                                <div class="col-sm-12"> 
                                     <button class="btn btn-success" onclick="printMinMax()">Print Min to Max</button> 
                                     <button class="btn btn-primary" onclick="printMaxMin()">Print Max to Min </button> 
                                     <button class="btn btn-warning" onclick="evenNum()">Even</button>
                                     <button class="btn btn-secondary" onclick="odd()">Odd</button>
                                     <button class="btn btn-primary" onclick="multiples()">Multiples</button>
+                                    <button class="btn btn-primary" onclick="multiplesTable()">Multi-table</button>
+                                    <button class="btn btn-danger" onclick="getFactors()">getFactors</button>
                                 </div>
                               
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <hr>
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="col">
@@ -126,22 +138,49 @@
                     s+=1;
                 }
             }
+            function multiplesTable() {
+                var minVal = document.getElementById('minValue').value;
+                var maxVal = document.getElementById('maxValue').value;
+                document.getElementById("resultOfBlock").innerHTML=""; 
 
+                                // Create a <li> node
+                       // Create a text node
+                
 
-            
-
-
-            // function calculate(num) {
+                var s=1;
+                while(s<=maxVal){ 
+                    
+                    multi=minVal*s;
+                    // document.getElementById("resultOfBlock").append(minVal+'*'+s+'='+multi); 
+                    var node = document.createElement("h4"); 
+                    var textnode = document.createTextNode(minVal+'*'+s+'='+multi); 
+                    node.appendChild(textnode); 
+                    document.getElementById("resultOfBlock").appendChild(node);
+                    s+=1;
+                }
+            }
+            // function getFactors() {
             //     var str = "0";
-            //     for (var i = 1; i <= num; i++) {
-            //         if (num % i == 0) {
-            //             str += ',' + i;
-            //         }
+            //     var i=1; 
+            //     var num=document.getElementById('factors').value;
+            //     while (i<=num) {
+                 
+
             //     }
-            //     alert(str);
             // }
-            // calculate(84);
-            //
+            
+            function getFactors(num) {
+                var num=document.getElementById('factors').value;
+                document.getElementById("resultOfBlock").innerHTML=""; 
+                for (var i = 1; i <= num; i++) {
+                    if (num % i == 0) {
+                        document.getElementById("resultOfBlock").append(i+' '); 
+                    }
+                }
+                
+            }
+          
+            
         </script>
 </body>
 
