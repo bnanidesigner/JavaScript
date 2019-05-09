@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -39,33 +40,36 @@
                 <div class="col">
                     <div class="card custom-card">
                         <div class="card-body">
-                           <h4>While loop </h4>
+                            <h4>While loop </h4>
                             <div class="row">
                                 <div class="col-sm-3">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="minValue" value="" placeholder="Enter Minimum value">
+                                        <input type="text" class="form-control" id="minValue" value=""
+                                            placeholder="Enter Minimum value">
                                     </div>
                                 </div>
                                 <div class="col-sm-3">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="maxValue" value="" placeholder="Enter Maximum value">
+                                        <input type="text" class="form-control" id="maxValue" value=""
+                                            placeholder="Enter Maximum value">
                                     </div>
                                 </div>
                                 <div class="col-sm-2">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="factors" value="" placeholder="Enter factor value">
+                                        <input type="text" class="form-control" id="factors" value=""
+                                            placeholder="Enter factor value">
                                     </div>
                                 </div>
-                                <div class="col-sm-12"> 
-                                    <button class="btn btn-success" onclick="printMinMax()">Print Min to Max</button> 
-                                    <button class="btn btn-primary" onclick="printMaxMin()">Print Max to Min </button> 
+                                <div class="col-sm-12">
+                                    <button class="btn btn-success" onclick="printMinMax()">Print Min to Max</button>
+                                    <button class="btn btn-primary" onclick="printMaxMin()">Print Max to Min </button>
                                     <button class="btn btn-warning" onclick="evenNum()">Even</button>
                                     <button class="btn btn-secondary" onclick="odd()">Odd</button>
                                     <button class="btn btn-primary" onclick="multiples()">Multiples</button>
                                     <button class="btn btn-primary" onclick="multiplesTable()">Multi-table</button>
                                     <button class="btn btn-danger" onclick="getFactors()">getFactors</button>
                                 </div>
-                              
+
                             </div>
                             <div class="row">
                                 <div class="col">
@@ -86,43 +90,47 @@
                 <div class="col">
                     <div class="card">
                         <div class="card-body">
-                            <h4>    For Loop   </h4>
-                                <div class="row">
-                                        <div class="col-sm-3">
-                                                <div class="form-group">
-                                                    <input type="text" class="form-control" id="numVal" value="" placeholder="Enter Number">
-                                                </div>
-                                        </div>
-                                        <!-- <div class="col-sm-3">
+                            <h4> For Loop </h4>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="numVal" value=""
+                                            placeholder="Enter Number">
+                                    </div>
+                                </div>
+                                <!-- <div class="col-sm-3">
                                                 <div class="form-group">
                                                     <input type="text" class="form-control" id="tableVal" value="" placeholder="Enter Table Number">
                                                 </div>
                                         </div> -->
-                                        <div class="col-sm-3">
-                                                <div class="form-group">
-                                                    <input type="text" class="form-control" id="endtableVal" value="" placeholder="Enter table count">
-                                                </div>
-                                        </div>
-                                        <div class="col-sm-12">
-                                                <button class="btn btn-success" onclick="printForLoopVal()">Print Min to Max</button> 
-                                                <button class="btn btn-success" onclick="printForMaxtoMinVal()">Print Max to Min</button>
-                                                <button class="btn btn-success" onclick="printForEvent()">Event</button>
-                                                <button class="btn btn-success" onclick="printForOdd()">Odd</button>
-                                                <button class="btn btn-success" onclick="printTable()">Tables</button>
-                                                <button class="btn btn-success" onclick="stars()">stars</button>
-                                        </div>
+                                <div class="col-sm-3">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="endtableVal" value=""
+                                            placeholder="Enter table count">
+                                    </div>
                                 </div>
-                                <div class="row">
-                                        <div class="col">
-                                            <hr>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col">
-                                            <div id="resultOfForBlock"></div>
-                                        </div>
-                                    </div>
-                          
+                                <div class="col-sm-12">
+                                    <button class="btn btn-success" onclick="printForLoopVal()">Print Min to
+                                        Max</button>
+                                    <button class="btn btn-success" onclick="printForMaxtoMinVal()">Print Max to
+                                        Min</button>
+                                    <button class="btn btn-success" onclick="printForEvent()">Event</button>
+                                    <button class="btn btn-success" onclick="printForOdd()">Odd</button>
+                                    <button class="btn btn-success" onclick="printTable()">Tables</button>
+                                    <button class="btn btn-success" onclick="stars()">stars</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <hr>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <div id="resultOfForBlock"></div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -136,73 +144,73 @@
         <script src="assets/js/bootstrap.min.js"></script>
         <script>
             function printMinMax() {
-                var minVal = document.getElementById('minValue').value; 
+                var minVal = document.getElementById('minValue').value;
                 var maxVal = document.getElementById('maxValue').value;
-                document.getElementById("resultOfBlock").innerHTML=""; 
-                while(minVal<=maxVal){ // 1 <= 10
-                    document.getElementById("resultOfBlock").append(minVal+' ');  
+                document.getElementById("resultOfBlock").innerHTML = "";
+                while (minVal <= maxVal) { // 1 <= 10
+                    document.getElementById("resultOfBlock").append(minVal + ' ');
                     minVal++;
                 }
             }
             function printMaxMin() {
                 var minVal = document.getElementById('minValue').value;
                 var maxVal = document.getElementById('maxValue').value;
-                document.getElementById("resultOfBlock").innerHTML=""; 
-                while(maxVal>=minVal){ //10 >= 1
-                    document.getElementById("resultOfBlock").append(maxVal+' ');  
+                document.getElementById("resultOfBlock").innerHTML = "";
+                while (maxVal >= minVal) { //10 >= 1
+                    document.getElementById("resultOfBlock").append(maxVal + ' ');
                     maxVal--;
                 }
             }
 
             function evenNum() {
-                var minVal = 2 ;
+                var minVal = 2;
                 var maxVal = document.getElementById('maxValue').value;
-                document.getElementById("resultOfBlock").innerHTML=""; 
-                while(minVal<=maxVal){ // 1 <= 10
-                    document.getElementById("resultOfBlock").append(minVal+' ');  
-                    minVal+=2;
+                document.getElementById("resultOfBlock").innerHTML = "";
+                while (minVal <= maxVal) { // 1 <= 10
+                    document.getElementById("resultOfBlock").append(minVal + ' ');
+                    minVal += 2;
                 }
             }
             function odd() {
-                var minVal = 1 ;
+                var minVal = 1;
                 var maxVal = document.getElementById('maxValue').value;
-                document.getElementById("resultOfBlock").innerHTML=""; 
-                while(minVal<=maxVal){ // 1 <= 10
-                    document.getElementById("resultOfBlock").append(minVal+' ');  
-                    minVal+=2;
+                document.getElementById("resultOfBlock").innerHTML = "";
+                while (minVal <= maxVal) { // 1 <= 10
+                    document.getElementById("resultOfBlock").append(minVal + ' ');
+                    minVal += 2;
                 }
             }
             function multiples() {
                 var minVal = document.getElementById('minValue').value;
                 var maxVal = document.getElementById('maxValue').value;
-                document.getElementById("resultOfBlock").innerHTML=""; 
-                var s=1;
-                while(s<=maxVal){ 
-                    
-                    multi=minVal*s;
-                    document.getElementById("resultOfBlock").append(multi+' ');  
-                    s+=1;
+                document.getElementById("resultOfBlock").innerHTML = "";
+                var s = 1;
+                while (s <= maxVal) {
+
+                    multi = minVal * s;
+                    document.getElementById("resultOfBlock").append(multi + ' ');
+                    s += 1;
                 }
             }
             function multiplesTable() {
                 var minVal = document.getElementById('minValue').value;
                 var maxVal = document.getElementById('maxValue').value;
-                document.getElementById("resultOfBlock").innerHTML=""; 
+                document.getElementById("resultOfBlock").innerHTML = "";
 
-                                // Create a <li> node
-                       // Create a text node
-                
+                // Create a <li> node
+                // Create a text node
 
-                var s=1;
-                while(s<=maxVal){ 
-                    
-                    multi=minVal*s;
+
+                var s = 1;
+                while (s <= maxVal) {
+
+                    multi = minVal * s;
                     // document.getElementById("resultOfBlock").append(minVal+'*'+s+'='+multi); 
-                    var node = document.createElement("h4"); 
-                    var textnode = document.createTextNode(minVal+'*'+s+'='+multi); 
-                    node.appendChild(textnode); 
+                    var node = document.createElement("h4");
+                    var textnode = document.createTextNode(minVal + '*' + s + '=' + multi);
+                    node.appendChild(textnode);
                     document.getElementById("resultOfBlock").appendChild(node);
-                    s+=1;
+                    s += 1;
                 }
             }
             // function getFactors() {
@@ -210,101 +218,100 @@
             //     var i=1; 
             //     var num=document.getElementById('factors').value;
             //     while (i<=num) {
-                 
+
 
             //     }
             // }
-            
+
             function getFactors(num) {
-                var num=document.getElementById('factors').value;
-                document.getElementById("resultOfBlock").innerHTML=""; 
+                var num = document.getElementById('factors').value;
+                document.getElementById("resultOfBlock").innerHTML = "";
                 for (var i = 1; i <= num; i++) {
                     if (num % i == 0) {
-                        document.getElementById("resultOfBlock").append(i+' '); 
+                        document.getElementById("resultOfBlock").append(i + ' ');
                     }
                 }
-                
+
             }
             function printForLoopVal() {
-                var num=document.getElementById('numVal').value;
-                document.getElementById("resultOfForBlock").innerHTML=""; 
+                var num = document.getElementById('numVal').value;
+                document.getElementById("resultOfForBlock").innerHTML = "";
                 for (var i = 1; i <= num; i++) {
-                    document.getElementById("resultOfForBlock").append(i+' '); 
+                    document.getElementById("resultOfForBlock").append(i + ' ');
                 }
-                
+
             }
             function printForMaxtoMinVal() {
-                var num=document.getElementById('numVal').value;
-                document.getElementById("resultOfForBlock").innerHTML=""; 
-               
+                var num = document.getElementById('numVal').value;
+                document.getElementById("resultOfForBlock").innerHTML = "";
+
                 for (var a = 1; num >= a; num--) {
-                    document.getElementById("resultOfForBlock").append(num+' '); 
+                    document.getElementById("resultOfForBlock").append(num + ' ');
                 }
-                
+
             }
             function printForEvent() {
-                var num=document.getElementById('numVal').value;
-                document.getElementById("resultOfForBlock").innerHTML=""; 
-               
-                for (var i=0; i <= num; i=i+2) {
-                   
-                    document.getElementById("resultOfForBlock").append(i+' '); 
+                var num = document.getElementById('numVal').value;
+                document.getElementById("resultOfForBlock").innerHTML = "";
+
+                for (var i = 0; i <= num; i = i + 2) {
+
+                    document.getElementById("resultOfForBlock").append(i + ' ');
                 }
-                
+
             }
             function printForOdd() {
-                var num=document.getElementById('numVal').value;
-                document.getElementById("resultOfForBlock").innerHTML=""; 
-               
-                for (var i=1; i <= num; i=i+2) {
-                   
-                    document.getElementById("resultOfForBlock").append(i+' '); 
+                var num = document.getElementById('numVal').value;
+                document.getElementById("resultOfForBlock").innerHTML = "";
+
+                for (var i = 1; i <= num; i = i + 2) {
+
+                    document.getElementById("resultOfForBlock").append(i + ' ');
                 }
-                
+
             }
             function printTable() {
                 // var recNum=document.getElementById('tableVal').value;
-                var countVal=document.getElementById('endtableVal').value;
-                document.getElementById("resultOfForBlock").innerHTML=""; 
-               
-              for(var recNum=1; recNum<=countVal; recNum++ ){
+                var countVal = document.getElementById('endtableVal').value;
+                document.getElementById("resultOfForBlock").innerHTML = "";
 
-                for (var i=1; i <= countVal; i++) {
-                    var s=recNum*i;
-                    // document.getElementById("resultOfForBlock").append(s+' '); 
+                for (var recNum = 1; recNum <= countVal; recNum++) {
+
+                    for (var i = 1; i <= countVal; i++) {
+                        var s = recNum * i;
+                        // document.getElementById("resultOfForBlock").append(s+' '); 
 
 
-                    var node = document.createElement("h4"); 
-                    var textnode = document.createTextNode(recNum+'*'+i+'='+s); 
-                    node.appendChild(textnode); 
-                    document.getElementById("resultOfForBlock").appendChild(node);
+                        var node = document.createElement("h4");
+                        var textnode = document.createTextNode(recNum + '*' + i + '=' + s);
+                        node.appendChild(textnode);
+                        document.getElementById("resultOfForBlock").appendChild(node);
+                    }
+
+
                 }
-                
 
-              }
-                
-                
+
             }
 
-            function stars(){
-                var num=document.getElementById('numVal').value;
-                var  str="";
-                for(var x=1; x<=num; x++){
-                    for(var y=1; y<=x; y++)
-                    {
-                        str=str+"*";
+            function stars() {
+                var num = document.getElementById('numVal').value;
+                var str = "";
+                for (var x = 1; x <= num; x++) {
+                    for (var y = 1; y <= x; y++) {
+                        str = str + "*";
                     }
-                    document.write(str+"<br>");
+                    document.write(str + "<br>");
                     console.log(str);
 
-                    str="";
+                    str = "";
                 }
 
             }
 
-            
-          
-            
+
+
+
         </script>
 </body>
 
