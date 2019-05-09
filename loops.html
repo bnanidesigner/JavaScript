@@ -93,11 +93,23 @@
                                                     <input type="text" class="form-control" id="numVal" value="" placeholder="Enter Number">
                                                 </div>
                                         </div>
+                                        <!-- <div class="col-sm-3">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" id="tableVal" value="" placeholder="Enter Table Number">
+                                                </div>
+                                        </div> -->
+                                        <div class="col-sm-3">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" id="endtableVal" value="" placeholder="Enter table count">
+                                                </div>
+                                        </div>
                                         <div class="col-sm-12">
                                                 <button class="btn btn-success" onclick="printForLoopVal()">Print Min to Max</button> 
                                                 <button class="btn btn-success" onclick="printForMaxtoMinVal()">Print Max to Min</button>
                                                 <button class="btn btn-success" onclick="printForEvent()">Event</button>
                                                 <button class="btn btn-success" onclick="printForOdd()">Odd</button>
+                                                <button class="btn btn-success" onclick="printTable()">Tables</button>
+                                                <button class="btn btn-success" onclick="stars()">stars</button>
                                         </div>
                                 </div>
                                 <div class="row">
@@ -249,6 +261,45 @@
                     document.getElementById("resultOfForBlock").append(i+' '); 
                 }
                 
+            }
+            function printTable() {
+                // var recNum=document.getElementById('tableVal').value;
+                var countVal=document.getElementById('endtableVal').value;
+                document.getElementById("resultOfForBlock").innerHTML=""; 
+               
+              for(var recNum=1; recNum<=countVal; recNum++ ){
+
+                for (var i=1; i <= countVal; i++) {
+                    var s=recNum*i;
+                    // document.getElementById("resultOfForBlock").append(s+' '); 
+
+
+                    var node = document.createElement("h4"); 
+                    var textnode = document.createTextNode(recNum+'*'+i+'='+s); 
+                    node.appendChild(textnode); 
+                    document.getElementById("resultOfForBlock").appendChild(node);
+                }
+                
+
+              }
+                
+                
+            }
+
+            function stars(){
+                var num=document.getElementById('numVal').value;
+                var  str="";
+                for(var x=1; x<=num; x++){
+                    for(var y=1; y<=x; y++)
+                    {
+                        str=str+"*";
+                    }
+                    document.write(str+"<br>");
+                    console.log(str);
+
+                    str="";
+                }
+
             }
 
             
