@@ -365,8 +365,8 @@
             }
              // LeastNumTwo
             function leastNumTwo() {
-                var firstNumLeast = document.getElementById('firstNumLeast').value;
-                var secondNumLeast = document.getElementById('secondNumLeast').value;
+                var firstNumLeast = Number(document.getElementById('firstNumLeast').value);
+                var secondNumLeast = Number(document.getElementById('secondNumLeast').value);
                
                 if ( firstNumLeast < secondNumLeast ) {
                     document.getElementById('resultOfleastNumTwo').textContent = 'Least Number Is '+firstNumLeast;
