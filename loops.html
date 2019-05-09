@@ -39,7 +39,7 @@
                 <div class="col">
                     <div class="card custom-card">
                         <div class="card-body">
-                            <!-- <h4>1.	Write a program to print 1 to 10 numbers using a while loop </h4> -->
+                           <h4>While loop </h4>
                             <div class="row">
                                 <div class="col-sm-3">
                                     <div class="form-group">
@@ -77,6 +77,39 @@
                                     <div id="resultOfBlock"></div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4>    For Loop   </h4>
+                                <div class="row">
+                                        <div class="col-sm-3">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" id="numVal" value="" placeholder="Enter Number">
+                                                </div>
+                                        </div>
+                                        <div class="col-sm-12">
+                                                <button class="btn btn-success" onclick="printForLoopVal()">Print Min to Max</button> 
+                                                <button class="btn btn-success" onclick="printForMaxtoMinVal()">Print Max to Min</button>
+                                                <button class="btn btn-success" onclick="printForEvent()">Event</button>
+                                        </div>
+                                </div>
+                                <div class="row">
+                                        <div class="col">
+                                            <hr>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <div id="resultOfForBlock"></div>
+                                        </div>
+                                    </div>
+                          
                         </div>
                     </div>
                 </div>
@@ -179,6 +212,35 @@
                 }
                 
             }
+            function printForLoopVal() {
+                var num=document.getElementById('numVal').value;
+                document.getElementById("resultOfForBlock").innerHTML=""; 
+                for (var i = 1; i <= num; i++) {
+                    document.getElementById("resultOfForBlock").append(i+' '); 
+                }
+                
+            }
+            function printForMaxtoMinVal() {
+                var num=document.getElementById('numVal').value;
+                document.getElementById("resultOfForBlock").innerHTML=""; 
+               
+                for (var a = 1; num >= a; num--) {
+                    document.getElementById("resultOfForBlock").append(num+' '); 
+                }
+                
+            }
+            function printForEvent() {
+                var num=document.getElementById('numVal').value;
+                document.getElementById("resultOfForBlock").innerHTML=""; 
+               
+                for (var i=0; i <= num; i++) {
+                    s= i+2
+                    document.getElementById("resultOfForBlock").append(s+' '); 
+                }
+                
+            }
+
+            
           
             
         </script>
