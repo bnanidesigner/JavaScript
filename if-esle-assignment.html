@@ -211,6 +211,33 @@
                                 </div>
                              </div>
                     </div>
+                    <div class="row">
+                        <div class="col">
+        
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4>9. Write a program to print the least number in given two numbers</h4>
+                                    <div class="row">
+                                        <div class="col-sm-2">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" id="firstNumLeast" value="" placeholder="Enter First Number">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <div class="form-group">
+                                            <input type="text" class="form-control" id="secondNumLeast" value="" placeholder="Enter Second Number">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-3"> <button class="btn btn-default"
+                                                onclick="leastNumTwo()">Submit</button></div>
+                                        <div class="col-sm-3">
+                                            <div id="resultOfleastNumTwo"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                         </div>
+                </div>
         </div>
 
 
@@ -325,8 +352,8 @@
             }
             // greatestNumTwo
             function greatestNumTwo() {
-                var fistNumVal = document.getElementById('firstNum').value;
-                var secondNumVal = document.getElementById('secondNum').value;
+                var fistNumVal = Number(document.getElementById('firstNum').value);
+                var secondNumVal = Number(document.getElementById('secondNum').value);
                
                 if ( fistNumVal > secondNumVal ) {
                     document.getElementById('resultOfgreatestNumTwo').textContent = 'Greatest Number Is '+fistNumVal;
@@ -334,6 +361,19 @@
                 }
                 else {
                     document.getElementById('resultOfgreatestNumTwo').textContent = 'Greatest Number Is '+secondNumVal;
+                }
+            }
+             // LeastNumTwo
+            function leastNumTwo() {
+                var firstNumLeast = document.getElementById('firstNumLeast').value;
+                var secondNumLeast = document.getElementById('secondNumLeast').value;
+               
+                if ( firstNumLeast < secondNumLeast ) {
+                    document.getElementById('resultOfleastNumTwo').textContent = 'Least Number Is '+firstNumLeast;
+                                     
+                }
+                else {
+                    document.getElementById('resultOfleastNumTwo').textContent = 'Least Number Is '+secondNumLeast;
                 }
             }
 
