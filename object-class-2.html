@@ -107,28 +107,28 @@
 
          
 
-        for(let i=0; i<=family.length; i++){
+        for(let i=0; i<family.length; i++){
             
             for(k in family[i]){
                 console.log(k+": ", family[i][k]);
             }
            
-            // for(j in family[i].child1){
-            //     console.log(j+": ",family[i].child1[j]);
+            for(j in family[i].child1){
+                console.log(j+": ",family[i].child1[j]);
                
-            // }
+            }
 
            
             
             console.log("-----------------------------------------------------------------------------------");
-            // if(family[i].child1.age<=20)
-            // {
-            //     console.log( family[i]);
-            // }
+            if(family[i].child1.age<=20)
+            {
+                console.log( family[i].child1[j]);
+            }
         }
         // console.log(family);
        
-       for(let j=0; j<=employee.length; j++)
+       for(let j=0; j<employee.length; j++)
        {
         // console.log(employee[j]);
         if(employee[j].age>30)
