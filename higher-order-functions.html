@@ -29,17 +29,7 @@
                  
                 </div>
             </div>
-
-          
-
-            
-               
-              
-                  
-                  
-                  
-                   
-        </div>
+    </div>
 
 
         <!-- Optional JavaScript -->
@@ -48,16 +38,36 @@
         <script src="assets/js/popper.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
         <script>
-          function myDEtails(){
-              console.log("Hi This is Function Class");
-            //   return "This is function return value";
-          }
+            // setTimeout(function(){
+            //     console.log("This function called as a higher order functions");
+            // },4000);
 
-          var abc=myDEtails();
-          console.log(abc);
-          console.log("---------------------------------");
-          console.log(myDEtails());
+            function printVal(){
+                return (function(){
+                    console.log("Hello this new type of example higher order function");
+                })();
+            }
+            var x=printVal();
+            console.log(x);
+            console.log("----------------------------------------------------------");
+
+            function add(a,b){
+                return a+b;
+            }
+            var z=add(10,20);
+            console.log(z);
+            var res=z*z;
+            console.log(res);
+            //-------------------------------------------------------------------------
+            function abc(){
+                return function(){
+                    console.log("Hello Higher Order function ");
+                }
+            }    
+
+            var y=abc();
+            var res2=y();
+            console.log(res2);
         </script>
 </body>
-
 </html>
