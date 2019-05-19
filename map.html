@@ -79,11 +79,27 @@
                         {'name'     : 'Build for Demo', 'duration' : 240}
                     ];
 
-          var taskNames=tasks.map(function(task,index, array){
+          var taskNames=tasks.map(function(task, index, array){
               return task.name;
           });          
           console.log(taskNames);
 
+          var employee=[
+                            {"name":"Naresh","des":"UI Developer and Team Lead", "age":"34"},
+                            {"name":"Mallesh","des":"HR and Admin", "age":"38"},
+                            {"name":"Chari","des":"Mobile Developer", "age":"27"},
+                            {"name":"Govind","des":"PHP & Angular Developer", "age":"26"}
+                        ];
+            var empNames=employee.map(function(emp,index,array){
+                return emp.name;
+            });
+        console.log(empNames);
+        console.log("--------------------------------------");
+        var empDes=employee.map(function(empdes, index, array){
+            return empdes.des;
+        });
+
+        console.log(empDes);
 
         </script>
 </body>
