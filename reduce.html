@@ -34,8 +34,10 @@
                 </div>
             </div>
             <div class="row">
-               
-              
+               <div class="col-sm-12">
+                    <h4>Example</h4>
+               </div>
+                  
 
 
                 <div class="col-sm-3">
@@ -55,9 +57,35 @@
                 <div class="col-sm-3">
                     <button class="btn btn-default" onclick="reduceMethod()">Click here</button>
                 </div>
+                <div class="col-sm-12"><hr></div>
              
               
             </div>
+            <div class="row">
+                    <div class="col-sm-12">
+                            <h4>Example 2</h4>
+                       </div>
+            </div>
+            <div class="row">
+                    <div class="col-sm-3">
+                            <div class="form-group">
+                                    <label> Array</label>
+                                    <p>[2.6, 20.3, 11.1, 40.7]</p>
+                             </div>
+                       
+                    </div>
+                    <div class="col-sm-3">
+                            <div class="form-group">
+                                    <label> Reduce Output</label>
+                                    <p id="res-block2"></p>
+                             </div>
+                       
+                    </div>
+                    <div class="col-sm-3">
+                            <button class="btn btn-default" onclick="reduceMethod2()">Click here</button>
+                        </div>
+            </div>
+            
            
     </div>
 
@@ -76,6 +104,19 @@
             function reduceMethod(item){
                 document.getElementById("res-block").innerHTML=arr.reduce(sumofArray);
             }
+
+            var abc=[2.6, 20.3, 11.1, 40.7];
+            function sumofArrayMath(sum, num)
+            {
+                return sum+Math.round(num);
+            }
+
+            function reduceMethod2(item)
+            {
+                document.getElementById("res-block2").innerHTML=abc.reduce(sumofArrayMath, 0);
+            }
+
+
 
         </script>
 </body>
