@@ -34,7 +34,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-3">
+                <!-- <div class="col-sm-3">
                     
 
                     <div class="form-group">
@@ -42,7 +42,16 @@
                         <input type="text" class="form-control" id="multiplayVal" value="">
                       </div>
                     
-                </div>
+                </div> -->
+                <div class="col-sm-3">
+                    <div class="form-group">
+                            <label> Original array</label>
+                            <p id="array-block"></p>
+                     </div>
+               
+            </div>
+
+
                 <div class="col-sm-3">
                         <div class="form-group">
                                 <label> New array</label>
@@ -67,20 +76,25 @@
         <script>
             var items=[20,12,45,87,8,15,6]; // Original array 
             demoP=document.getElementById("result-block");
+            var multiplayVal=document.getElementById("multiplayVal").value;
            function arrayPrint(item, index)
            {
-            demoP.innerHTML= demoP.innerHTML + "index[" + index + "]: " + item + "<br>"; 
+            demoP.innerHTML= demoP.innerHTML + "index[" + index + "]: " + item+ "<br>"; 
 
             
            }
            var a=[2,4,6,8,9,70];
+          
            function callBack(element, index, array){
                document.write("a["+ index +"]="+ element + "<br>");
            }
            a.forEach(callBack);
 
 
-         
+        //  function originalArrayPrint(ele, index, array){
+        //     document.getElementById("array-block").innerHTML=document.getElementById.innerHTML+ele;
+        //  }
+        //  items.forEach(originalArrayPrint);
 
            
 
