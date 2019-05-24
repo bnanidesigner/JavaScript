@@ -72,15 +72,14 @@
             
            
     </div>
-
-
-        <!-- Optional JavaScript -->
+<!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="assets/js/jquery-3.2.1.slim.min.js"></script>
         <script src="assets/js/popper.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
         <script>
             function Employee(fname,lname,eid,doj,des){
+                this.curentyear=2019;
                 this.firstname=fname;
                 this.lastname=lname;
                 this.empid=eid;
@@ -89,13 +88,16 @@
                 this.name=function(){
                     return this.firstname+" "+this.lastname;
                 };
-                
-                                
+                this.experience=function(){
+                    return this.curentyear-this.doj;
+                }
+                    
             }
            var emp1=new Employee("Naresh","Bolakonda","RP00012",2009,"UI Developer");
-           var emp2=new Employee("Chari","Sesha","RP00016",2014,"Php Developer");
+           var emp2=new Employee("Chari","Sesha","RP00016",2015,"Php Developer");
         //    document.getElementById("res-block").innerHTML=JSON.stringify(emp1);
-        document.getElementById("res-block").innerHTML=emp2.name();
+        document.getElementById("res-block").innerHTML=emp2.experience();
+        console.dir(emp2);
            </script>
 </body>
 </html>
