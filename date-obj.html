@@ -51,7 +51,7 @@ new Date(date string);
 
                 <div class="col">
                         <div class="form-group">
-                                <label> constructor</label>
+                                <label> Date</label>
                                 <p id="res-block"></p>
                          </div>
                    
@@ -75,8 +75,9 @@ new Date(date string);
         <script src="assets/js/popper.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
         <script>
-            var date=new Date();
+            var date=new Date("06-07-1985");
             document.getElementById("showDate").innerHTML=date;
+            document.getElementById("res-block").innerHTML=date.getFullYear();
             console.log(date.getFullYear());
             
         </script>
