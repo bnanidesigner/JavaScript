@@ -63,6 +63,7 @@
     </div>
 <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
         <script src="assets/js/jquery-3.2.1.slim.min.js"></script>
         <script src="assets/js/popper.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
@@ -72,17 +73,17 @@
             }    
             // console.dir(Employee);
             // function Student(){
-
             // }
             // console.dir(Student);
             var emp1=new Employee();
             var emp2=new Employee();
             Employee.prototype.y="300";
-         emp1.x++;
-         console.log(emp1.x);
-         
-
-
+        //  emp1.x++;
+        //  console.log(emp1.x);
+        //  console.log(emp2.x);
+        emp1.__proto__.y++;
+        console.log(emp1.__proto__.y);
+        console.log(emp2.__proto__.y);
         </script>
 </body>
 </html>
