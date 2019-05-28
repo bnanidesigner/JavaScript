@@ -28,6 +28,15 @@
                     <h4>Syntax</h4>
                     <div class="highlight">
                     <pre>
+                            function add(x,y,c)
+                            {
+                                setTimeout(function(){   
+                                    c(x+y); 
+                                
+                                },3000);
+                              
+                            }
+                       add(25,45, function(res){  console.log(res);});
                         </pre>
 
 
@@ -66,6 +75,8 @@
              
               
             </div>
+
+            
 
         
            
@@ -123,6 +134,7 @@
             evenNum(evnNumVal, function(res){  var abc=res;  document.getElementById("res-block").innerHTML=abc;  });
         }
     
+
         
 
   
