@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <title>asynchronous</title>
+    <title>asynchronous-with-promises</title>
     <style>
         .section-block { padding: 20px; }
         .section-block h2 {         font-size: 18px;      }
@@ -22,7 +22,7 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h2>asynchronous</h2>
+                    <h2>asynchronous-with-promises</h2>
                     <p>
                     </p>
                     <h4>Syntax</h4>
@@ -87,29 +87,7 @@
         <script src="assets/js/popper.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
         <script>
-            function add(x,y,c)
-            {
-                setTimeout(function(){   
-                    c(x+y); 
-                
-                },3000);
-              
-            }
-       add(25,45, function(res){  console.log(res);});
-       console.log("Hi");
-       console.log("---------------------------------------");
-
-       function multiply(a,b,c)
-       {
-           setTimeout(function(){
-            c(a*b);
-           },4000);
-        }
-
-        multiply(5,3,function(res){console.log(res);})
-        console.log("sdhsjdhsj sdsjdsj");
-
-        console.log("---------------------------------------");
+      
 
     function evenNum(z, x)
         {
@@ -129,6 +107,26 @@
              var evnNumVal=document.getElementById("inputVal").value;
             evenNum(evnNumVal, function(res){  var abc=res;  document.getElementById("res-block").innerHTML=abc;  });
         }
+    
+
+    function divi(x,y){
+        var p=new Promise(function(resolve, reject){
+            if(y!=0)
+            {
+                resolve(x/y);
+            }
+            else{
+                reject("Denominotor should not be 0 value");
+            }
+        });
+
+        return p;
+    }
+
+    divi(12,3).then(function(res){console.log(res);}).catch(function(error){ console.log(error)});
+
+    console.log("Hi this is for testing");
+
     
 
         
