@@ -50,7 +50,9 @@
                           <tr>
                             <!-- <th scope="col">#</th> -->
                             <th scope="col">Name</th>
-                            <th scope="col">capital</th>
+                            <th scope="col">Capital</th>
+                            <th scope="col">Currencies Code</th>
+                            
                             <!-- <th scope="col">Handle</th> -->
                           </tr>
                         </thead>
@@ -78,20 +80,24 @@
             xhttp.onreadystatechange=function(){
                 if(this.readyState==4 && this.status==200){
                     var josnData=JSON.parse(this.responseText);
+                  //  console.log(josnData);
                     var tbody=document.getElementById("printData");
                     for(i=0; i<josnData.length; i++)
                     {
                         var tr=document.createElement("tr");
                         var td1=document.createElement("td");
                         var td2=document.createElement("td");
+                        var td3=document.createElement("td");
                         td1.innerHTML=josnData[i].name;
                         td2.innerHTML=josnData[i].capital;
+                        td3.innerHTML=josnData[i].currencies[0].code;
                         tr.appendChild(td1);
                         tr.appendChild(td2);
-                       console.log(tr);
-                        console.log(`${josnData[i].name}-------${josnData[i].capital}`);
+                        tr.appendChild(td3);
+                      // console.log(tr);
+                        console.log(`${josnData[i].name}-------${josnData[i].capital} ---- ${josnData[i].currencies[0].code}`);
                        // console.log(josnData[i].capital);
-                        console.log("---------------------------");
+                        //console.log("---------------------------");
                         tbody.appendChild(tr);
                     }
 
