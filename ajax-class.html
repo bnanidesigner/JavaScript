@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <title>AJAX</title>
+    <style>
+        .section-block { padding: 20px; }
+        .section-block h2 {         font-size: 18px;      }
+        .card-body h4 {  font-size: 16px;        color: #0062cc;        }
+        .card{ margin-bottom: 20px;}
+        .highlight{     margin-bottom: 1rem;  background-color: #f7f7f9;     padding: 1.5rem;}
+     h4 {  font-size: 16px; color: #0062cc; }
+    </style>
+</head>
+
+<body>
+    <div class="section-block">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>AJAX</h2>
+                    <p>
+                        Asynchronous JavaScript and XML.
+                    </p>
+                    <ul>
+                        <li>It is a technique used to send and receive data asynchronously.</li>
+                        <li>Now a days we use JSON as a data format </li>
+                        <li>XmlHttpRequest (XHR) Object</li>
+                    </ul>
+                    <h4>Syntax</h4>
+                    <div class="highlight">
+                        <!-- array.sort( ); -->
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3"> <h4>AJAX</h4>
+                    <div class="form-group">
+                        <label>Enter Country Name</label>
+                        <input type="text" class="form-control" id="country" placeholder="Enter country ">
+                     
+                      </div>
+                </div>
+                <div class="col-md-3"><button class="btn btn-primary" onclick="loadData()">Load</button></div>
+                <div class="col-md-3"><div class="form-group">
+                    <label>Capital is</label>
+                    <p id="capital"></p>
+                 
+                  </div></div>
+
+            </div>
+      </div>
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="assets/js/jquery-3.2.1.slim.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script>
+           function loadData(){
+               var country=document.getElementById("country").value;
+               console.log(country);
+               var xhttp=new XMLHttpRequest();
+               xhttp.onreadystatechange=function(){
+                /* 
+                    0: request not initialized
+                    1: server connection established
+                    2: request received 
+                    3: processing requist 
+                    4: request finished and response is ready
+                */
+                if(xhttp.readyState===4 && this.status === 200){
+                    var responseData=xhttp.responseText;
+                    var jsonData=JSON.parse(responseData);
+                    var capital=jsonData[0].capital;
+                    document.getElementById("capital").innerHTML=capital;
+                }
+               }
+               xhttp.open("GET","https://restcountries.eu/rest/v2/name/"+country+"?fullText=true", true);
+               xhttp.send();
+           }
+        
+        </script>
+</body>
+</html>
